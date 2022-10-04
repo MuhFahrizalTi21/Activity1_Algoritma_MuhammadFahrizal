@@ -41,6 +41,38 @@ namespace Activity1_Algoritma_MuhammadFahrizal
                 a[i] = Int32.Parse(s1);
             }
         }
+
+        public void display()
+        {
+            // Menampilkan array yang tersusun 
+            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine(" Element array yang telah tersusun ");
+            Console.WriteLine("-------------------------------------");
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(a[j]);
+            }
+            Console.WriteLine("");
+        }
+        public void BubbleSortArray()
+        {
+            for (int i = 1; i < n; i++) // for n-1 passes
+            {
+                // pada pass i, bandingkan n-1 elemen pertama dengan elemen selanjutnya 
+                for (int j = 0; j < n - 1; j++)
+                {
+                    if (a[j] > a[j + 1]) // jika elemen tidak dalam urutan yang benar
+                    {
+                        //tuar elemen 
+                        int temp;
+                        temp = a[j];
+                        a[j] = a[j + 1];
+                        a[j + 1] = temp;
+                    }
+                }
+            }
+        }
         internal class Program
     {
         static void Main(string[] args)
