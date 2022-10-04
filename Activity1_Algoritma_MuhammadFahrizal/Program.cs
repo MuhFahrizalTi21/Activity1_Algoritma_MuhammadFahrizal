@@ -73,10 +73,27 @@ namespace Activity1_Algoritma_MuhammadFahrizal
                 }
             }
         }
-        internal class Program
-    {
-        static void Main(string[] args)
-        {
-        }
+
+
+        
+          static void Main(string[] args)
+          {
+                // Creating the object of the BubbleSort class
+                Program myList = new Program();
+
+                // Pemanggilan fungsi untuk menerima elemen array
+                myList.read();
+
+                // Pemanggilan fungsi untuk mengurutkan array 
+                myList.BubbleSortArray();
+
+                //pemanggilan fungsi untuk menampilkan array yang tersusun
+                myList.display();
+
+                //exit
+                Console.WriteLine("\nTekan Tombol Apa Saja Untuk Keluar");
+                Console.Read();
+          }
+       
     }
 }
